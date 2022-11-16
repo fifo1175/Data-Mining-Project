@@ -4,6 +4,9 @@ data = pd.read_csv('data.csv')
 
 print(data.info())
 del data[data.columns[0]]
-data = data.drop_duplicates()
-print(data.info())
-data.to_csv('./data.csv')
+neigh = set(data['Neighborhood'])
+neigh = list(neigh)
+
+print(len(neigh))
+for i in neigh:
+    print(i)
